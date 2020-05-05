@@ -1,0 +1,91 @@
+page = PAGE
+page{
+
+    typeNum=0
+
+    meta{
+        viewport = width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0
+        X-UA-Compatible = ie=edge
+        charset = utf-8
+    }
+
+    // Part 1: Fluid template section
+    10 = FLUIDTEMPLATE
+    10 {
+
+        templateName = Default
+
+        variables {
+            contentNormal < styles.content.get
+        }
+
+        templateRootPaths {
+            0 = {$page.fluidtemplate.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = {$page.fluidtemplate.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = {$page.fluidtemplate.layoutRootPath}
+        }
+
+
+        dataProcessing {
+
+            5 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            5 {
+                references.fieldName = media
+                as = refer
+            }
+
+            //create MENU from page
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                levels = 3
+                includeSpacer = 1
+                as = mainnavigation
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                    }
+                }//END dataProcessing for file in menu
+            }
+        } //END dataProcessing for menu
+
+    }//END FLUIDTEMPLATE
+
+    // Part 2: CSS file inclusion
+    includeCSS {
+        css1 = fileadmin/templates/LPMF/Resources/Public/css/global.css
+        css2 = fileadmin/templates/LPMF/Resources/Public/css/burger.css
+        css3 = fileadmin/templates/LPMF/Resources/Public/css/rte.css
+        css4 = https://fonts.googleapis.com/css?family=Lato&display=swap
+        css4.external = 1
+        css5 = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+        css5.external = 1
+        css6 = fileadmin/templates/LPMF/Resources/Public/css/bootstrap.min.css
+
+        100_custom = EXT:piment_config/Resources/Public/Css/custom.css
+    }
+
+
+    // Part 3: JavaScript file inclusion
+    //at first - before other libs from plugins
+    includeJS {
+        js1 = fileadmin/templates/LPMF/Resources/Public/js/jquery-1.12.4.min.js
+    }
+    includeJSFooterlibs{
+        #js1 = fileadmin/templates/LPMF/Resources/Public/js/jquery-1.12.4.min.js
+        /js2 = fileadmin/templates/LPMF/Resources/Public/js/bootstrap.min.js
+    }
+
+    //at second - after other libs from plugins
+    includeJSFooter {
+        //js1 = fileadmin/templates/LPMF/Resources/Public/js/global.js
+    }
+
+
+}//END PAGE

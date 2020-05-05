@@ -1,0 +1,5 @@
+#
+# This is the very root template for any typoscript constant includes
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TypoScript/Constants/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TypoScript/Constants/Plugins/" extensions="typoscript">

@@ -1,0 +1,9 @@
+
+plugin.tx_news {
+    view >
+    view {
+        templateRootPath = fileadmin/templates/LPMF/Resources/Private/Plugins/news/Private/Templates/
+        partialRootPath = fileadmin/templates/LPMF/Resources/Private/Plugins/news/Private/Partials/
+        layoutRootPaths = fileadmin/templates/LPMF/Resources/Private/Plugins/news/Private/Layouts/
+    }
+}

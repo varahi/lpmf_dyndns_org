@@ -1,0 +1,26 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+
+page {
+    fluidtemplate {
+        layoutRootPath = fileadmin/templates/LPMF/Resources/Private/Layouts/
+        partialRootPath = fileadmin/templates/LPMF/Resources/Private/Partials/
+        templateRootPath = fileadmin/templates/LPMF/Resources/Private/Templates/
+        pluginRootPath = fileadmin/templates/LPMF/Resources/Private/Plugins/
+    }
+}
+
+styles {
+    content {
+        textmedia.maxW = 1200
+        textmedia.maxWInText = 800
+        textmedia.linkWrap.width = 1200m
+    }
+}
+
+plugin.tx_nsalllightbox.settings.width = 1200
+plugin.tx_nsalllightbox.settings.type = fancybox
+
+#styles.content.textmedia.linkWrap.lightboxEnabled = 1
+#styles.content.textmedia.linkWrap.lightboxCssClass = lightbox
+#styles.content.textmedia.linkWrap.lightboxRelAttribute = lightbox[{field:uid}]
+#plugin.tx_fancybox.enableJquery = 1

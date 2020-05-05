@@ -1,0 +1,7 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
+#
+# This is the very root template for any typoscript action
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TypoScript/Page/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TypoScript/Libs/" extensions="typoscript">
