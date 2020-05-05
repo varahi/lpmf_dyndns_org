@@ -1,0 +1,115 @@
+[request.getQueryParams() ['tx_news_pi1|news'] > 0]
+
+# Modification titre de la page
+lib.pagetitle >
+lib.pagetitle = COA
+lib.pagetitle{
+   #wrap = |
+  20 = RECORDS
+     20 {
+          stdWrap.if.isTrue.data = GP:tx_news_pi1|news
+          dontCheckPid = 1
+          tables = tx_news_domain_model_news
+          source.data = GP:tx_news_pi1|news
+           source.intval = 1
+          conf.tx_news_domain_model_news = TEXT
+          conf.tx_news_domain_model_news {
+                field = title
+                htmlSpecialChars = 1
+          }
+                stdWrap.wrap = <h1>|</h1>
+                stdWrap.required = 1
+      }
+       
+}
+page.10.variables.main_title < lib.pagetitle
+
+# Page title généré à partir de tt_news
+temp.newsTitle = COA
+temp.newsTitle {
+        wrap = <meta property="og:title" content="|" />
+  10 = RECORDS
+  10 {
+    source = {GPvar:tx_ttnews|tt_news}
+    source.insertData = 1
+    tables = tt_news
+    conf.tt_news >
+    conf.tt_news = TEXT
+    conf.tt_news.field = title
+  }
+}
+
+
+temp.newsImageFacebook = COA
+temp.newsImageFacebook {
+        wrap = <meta property="og:image" content="http://{$config.domain}/uploads/pics/|" />
+  10 = RECORDS
+  10 {
+    source = {GPvar:tx_ttnews|tt_news}
+    source.insertData = 1
+    tables = tt_news
+    conf.tt_news >
+    conf.tt_news = TEXT
+    conf.tt_news.field = image
+    conf.tt_news.split {
+                  token = ,
+                  returnKey = 0
+                }
+  }
+}
+
+temp.newsUrlFacebook = COA
+temp.newsUrlFacebook {
+        wrap = <meta property="og:url" content="|" />
+        10 = TEXT
+        10.typolink {
+          parameter.data = TSFE:id
+          addQueryString = GET
+           additionalParams.insertData=1
+           addQueryString.exclude = cHash
+           returnLast = url
+           rawUrlEncode = 1
+       }
+}
+
+temp.newsDescFacebook = COA
+temp.newsDescFacebook {
+        wrap = <meta property="og:description" content="|" />
+  10 = RECORDS
+  10 {
+    source = {GPvar:tx_ttnews|tt_news}
+    source.insertData = 1
+    tables = tt_news
+    conf.tt_news >
+    conf.tt_news = TEXT
+    conf.tt_news.field = short//bodytext
+    conf.tt_news.stdWrap.stripHtml = 1
+  }
+}
+
+#ce n'est plus utile, tt_news le fait automatiquement
+#page.headerData.5 < temp.newsTitle
+
+page.headerData.110 >
+page.headerData.110 < temp.newsTitle
+
+page.headerData.111 > 
+page.headerData.111 < temp.newsImageFacebook
+
+page.headerData.112 > 
+page.headerData.112 < temp.newsUrlFacebook
+
+page.headerData.113 > 
+page.headerData.113 < temp.newsDescFacebook
+
+# Page description généré à partir de tt_news
+page.headerData.999 {
+    local >
+    local {
+      description.data = register:newsSubheader
+    }
+}
+
+page.headerData.200 >
+
+[end]

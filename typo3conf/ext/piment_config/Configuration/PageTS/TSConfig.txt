@@ -1,0 +1,61 @@
+#################
+#### TCEMAIN ####
+#################
+
+TCEMAIN.permissions {
+  #id de l'utilisateur et du group de la page
+  userid = 2
+  groupid = 1
+  #liste des permissions possibles
+  #show=1,edit=2,delete=4,new=8,editcontent=16
+  #user = 31
+  group = 31
+  #everybody = 0
+}
+
+#################
+#### TCEFORM ####
+#################
+
+TCEFORM.tt_content.header_layout {
+    altLabels {
+        1 = Titre 1 (h1)
+        2 = Titre 2 (h2)
+        3 = Titre 3 (h3)
+        4 = Titre 4 (h4)
+        5 = Titre 5 (h5)
+        100 = Titre caché
+    }
+
+    addItems {
+        6 = Titre 6 (h6)
+    }
+
+    removeItems = 0,1
+}
+
+#changement des noms des types de cadre powermail
+TCEFORM.tx_powermail_domain_model_field{
+    css {
+        addItems {
+        	datepicker = Datepicker
+            }
+        }
+    }
+}
+
+#changement des noms des types de cadre
+TCEFORM.tt_content.layout {
+	#addItems.20 = Liste élus
+}
+
+###################
+#### EXTENSION ####
+###################
+
+#tx_powermail.flexForm.type.addFieldOptions.jhcaptcharecaptcha = reCAPTCHA (jh_captcha)
+tx_powermail.flexForm.type.addFieldOptions.recaptcha = Google Recaptcha
+
+tx_news.templateLayouts {
+        0 = Mode Actualités
+}

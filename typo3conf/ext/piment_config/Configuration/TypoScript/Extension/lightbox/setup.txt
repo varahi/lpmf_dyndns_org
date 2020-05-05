@@ -1,0 +1,9 @@
+#la traduction dans la galerie est en dur dans le js
+page.includeJSFooter.bwrkLightbox_js >
+page.includeJSFooter.bwrkLightbox_js = {$page.fluidtemplate.jsRootPath}libs/lightbox.min.js
+
+lib.contentElement.settings.media.popup {
+   directImageLink = 1
+   JSwindow = 0
+   linkParams.ATagParams.dataWrap = data-lightbox="lightbox{field:uid}"
+} 

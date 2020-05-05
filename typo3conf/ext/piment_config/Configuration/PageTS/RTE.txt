@@ -1,0 +1,49 @@
+#############
+#### RTE ####
+#############
+RTE {
+    config {
+        tt_content {
+            bodytext {
+                types {
+                    text {
+                        preset = pimentrouge
+                    }
+                    textcolumn {
+                        preset = pimentrouge
+                    }
+                    texticon {
+                        preset = pimentrouge
+                    }
+                    textmedia {
+                        preset = pimentrouge
+                    }
+                    textpic {
+                        preset = pimentrouge
+                    }
+                    textteaser {
+                        preset = pimentrouge
+                    }
+                    panel {
+                        preset = pimentrouge
+                    }
+                }
+            }
+        }
+        tx_bootstrappackage_accordion_item {
+            bodytext {
+                preset = pimentrouge
+            }
+        }
+        tx_bootstrappackage_tab_item {
+            bodytext {
+                preset = pimentrouge
+            }
+        }
+		tx_news_domain_model_news {
+			bodytext {
+                preset = pimentrouge
+			}
+		}
+    }
+}

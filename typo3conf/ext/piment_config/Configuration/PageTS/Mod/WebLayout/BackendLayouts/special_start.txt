@@ -1,0 +1,132 @@
+######################################
+#### BACKENDLAYOUT: SPECIAL START ####
+######################################
+mod {
+    web_layout {
+        BackendLayouts {
+            special_start {
+                title = Special page accueil
+                config {
+				  backend_layout {
+					colCount = 4
+					rowCount = 10
+					rows {
+					  1 {
+						columns {
+						  1 {
+							name = Téléphone
+							colspan = 4
+							colPos = 100
+						  }
+						}
+					  }
+					  2 {
+						columns {
+						  1 {
+							name = Slideshow
+							colspan = 4
+							colPos = 101
+						  }
+						}
+					  }
+					  3 {
+						columns {
+						  1 {
+							name = Introduction
+							colspan = 4
+							colPos = 102
+						  }
+						}
+					  }
+					  4 {
+						columns {
+						  1 {
+							name = Icones
+							colspan = 4
+							colPos = 103
+						  }
+						}
+					  }
+					  5 {
+						columns {
+						  1 {
+							name = Réalisations texte
+							colspan = 2
+							colPos = 104
+						  }
+						  2 {
+							name = Réalisations image
+							colspan = 2
+							colPos = 105
+						  }
+						}
+					  }
+					  6 {
+						columns {
+						  1 {
+							name = Bloc bleu texte
+							colspan = 2
+							colPos = 106
+						  }
+						  2 {
+							name = Bloc bleu schéma
+							colspan = 2
+							colPos = 107
+						  }
+						}
+					  }
+					  7 {
+						columns {
+						  1 {
+							name = Texte travaux
+							colspan = 3
+							colPos = 108
+						  }
+						  2 {
+							name = Bloc orange travaux
+							colspan = 1
+							colPos = 109
+						  }
+						}
+					  }
+					  8 {
+						columns {
+						  1 {
+							name = Images autres
+							colspan = 4
+							colPos = 110
+						  }
+						}
+					  }
+					  9 {
+						columns {
+						  1 {
+							name = Liens footer 1
+							colspan = 1
+							colPos = 111
+						  }
+						  2 {
+							name = Liens footer 2
+							colspan = 1
+							colPos = 112
+						  }
+						  3 {
+							name = Liens footer 3
+							colspan = 1
+							colPos = 113
+						  }
+						  4 {
+							name = Adresse - Téléphone
+							colspan = 1
+							colPos = 114
+						  }
+						}
+					  }
+					}
+				  }
+				}
+                icon = EXT:piment_config/Resources/Public/Icons/special_start.gif
+            }
+        }
+    }
+}

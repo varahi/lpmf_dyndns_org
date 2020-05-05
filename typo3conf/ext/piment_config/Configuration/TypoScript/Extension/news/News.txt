@@ -1,0 +1,19 @@
+##############
+#### NEWS ####
+##############
+
+#[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
+    @import 'EXT:news/Configuration/TypoScript/setup.txt'
+	plugin.tx_news {
+		view >
+		view {
+			templateRootPath = fileadmin/templates/default/plugin_tpl/news/Private/Templates/
+
+			partialRootPath = fileadmin/templates/default/plugin_tpl/news/Private/Partials/
+
+			layoutRootPaths = fileadmin/templates/default/plugin_tpl/news/Private/Layouts/
+
+			widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
+		}
+	}
+#[global]
