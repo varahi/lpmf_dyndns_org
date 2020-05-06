@@ -2,29 +2,13 @@
 #### NEWS ####
 ##############
 
-#[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
-    @import 'EXT:news/Configuration/TypoScript/setup.txt'
-	plugin.tx_news {
-		view >
-		view {
-			templateRootPath = fileadmin/templates/default/plugin_tpl/news/Private/Templates/
-
-			partialRootPath = fileadmin/templates/default/plugin_tpl/news/Private/Partials/
-
-			layoutRootPaths = fileadmin/templates/default/plugin_tpl/news/Private/Layouts/
-
-			widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
-		}
-	}
-#[global]
-
 plugin.tx_news {
 	settings {
 		detail {
 			# media configuration
 			media {
 				image {
-					maxWidth = 282
+					maxWidth = 1200
 					maxHeight =
 
 					# Get lightbox settings from fluid_styled_content
@@ -33,7 +17,7 @@ plugin.tx_news {
 						class = {$styles.content.textmedia.linkWrap.lightboxCssClass}
 						width = {$styles.content.textmedia.linkWrap.width}
 						height = {$styles.content.textmedia.linkWrap.height}
-						rel = fancybox[myImageSet]
+						rel = lightbix[myImageSet]
 					}
 
 					fancybox {
@@ -41,10 +25,8 @@ plugin.tx_news {
 						class = {$styles.content.textmedia.linkWrap.fancyboxCssClass}
 						width = {$styles.content.textmedia.linkWrap.width}
 						height = {$styles.content.textmedia.linkWrap.height}
-						rel = fancybox[myImageSet]
+						rel = fancybox[images]
 					}
-
-
 				}
 			}
 		}

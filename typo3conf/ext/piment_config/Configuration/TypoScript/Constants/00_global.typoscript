@@ -16,11 +16,3 @@ styles {
         textmedia.linkWrap.width = 1200m
     }
 }
-
-plugin.tx_nsalllightbox.settings.width = 1200
-plugin.tx_nsalllightbox.settings.type = fancybox
-
-#styles.content.textmedia.linkWrap.lightboxEnabled = 1
-#styles.content.textmedia.linkWrap.lightboxCssClass = lightbox
-#styles.content.textmedia.linkWrap.lightboxRelAttribute = lightbox[{field:uid}]
-#plugin.tx_fancybox.enableJquery = 1
