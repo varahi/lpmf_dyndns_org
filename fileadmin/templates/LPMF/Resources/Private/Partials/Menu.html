@@ -1,0 +1,57 @@
+       
+        <div class="header_menu">
+            <a href="index.php"><img src="fileadmin/templates/LPMF/Resources/Public/img/logo.svg" alt=""></a>
+            <div class="button_container">
+            <f:for each="{mainnavigation}" as="mainnavigationItem">
+                <a href="{mainnavigationItem.link}" class="{mainnavigationItem.data.author}" >{mainnavigationItem.title}</a>
+                <f:if condition="{mainnavigationItem.children}">
+						<f:then>
+			<div class="nav-dropdown-content">
+                                <div class="nav-dropdown-menu">
+                                <f:for each="{mainnavigationItem.children}" as="child">
+                                    <div class="{child.data.author}">
+					<!-- <f:if condition="{child.files}"> -->
+						<!-- <f:image src="{child.files.1.uid}" treatIdAsReference="1" title="{child.files.1.title}" alt="{child.files.1.alternative}" /> -->
+					<!-- </f:if>                                         -->
+
+									<a class="menul2" href="{child.link}" data-img="fileadmin{child.files.2.originalFile.identifier}">> {child.title}</a>
+									<div class="submenu">
+										<f:for each="{child.children}" as="child2">
+											<a class="menul3" href="{child2.link}">• {child2.title}</a>
+										</f:for>
+									</div>
+									</div> 
+                                </f:for>                                   
+                                </div>
+                                <div id="dropdown_img" class="dropdown_img"></div>
+                            </div>
+						</f:then>
+                </f:if>
+            </f:for>
+            </div>
+            <div class="burger_menu">
+                <div class="burger_button">
+                    <div class="burger_line"></div>
+                    <div class="burger_line"></div>
+                    <div class="burger_line"></div>
+                </div>
+            </div>
+            <div class="opened_burger">
+            <f:for each="{mainnavigation}" as="mainnavigationItem">
+                <a href="{mainnavigationItem.link}" class="{mainnavigationItem.data.author}" >{mainnavigationItem.title}</a>
+                <div class="mobile_dropdown">
+                <f:for each="{mainnavigationItem.children}" as="child">
+                    <div class="{child.data.author}">
+			<f:if condition="{child.files}">
+				<f:image src="{child.files.1.uid}" treatIdAsReference="1" title="{child.files.1.title}" alt="{child.files.1.alternative}" />
+			</f:if>
+                        <a href="{child.link}" data-img="fileadmin{child.files.2.originalFile.identifier}">{child.title}
+			</a>                    
+			</div> 
+                </f:for>                    
+                </div>
+            </f:for>
+            </div>
+        </div>
+
+

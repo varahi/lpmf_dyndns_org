@@ -1,0 +1,168 @@
+
+.header_image{
+    width: 100%;
+}
+
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.header{
+    background-image: url("../img/electricityTop.png");
+    height: 40vh;
+}
+
+.content{
+    padding: 60px 150px 100px;
+}
+
+.content_head{
+    font-size: 48px;
+}
+
+.content_head2{
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.page_text{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.text_image{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 80px;
+    margin-top: 50px;
+}
+
+.info_block{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 90px;
+}
+.bold_text{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.vertical_text_image{
+    display: grid;
+    grid-template-rows: 5fr 6fr;
+}
+
+.car{
+    width: 100%;
+}
+
+
+#news{
+	margin-bottom: 50px;
+}
+#news .content_grid a{
+	float: right;
+	text-align: right;
+	color: #EB5757;
+    padding: 20px;
+    background-color: #1B7DFF;
+    border: none;
+    color: white;
+    height: 55px;
+	text-transform: uppercase;
+}
+#news .content_grid{
+	margin-bottom: 50px;
+	display: block;
+}
+#news .list-news, .content .news{
+	margin: 0 -5px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	   -moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		 -o-flex-wrap: wrap;
+			flex-wrap: wrap;
+}
+#news .list-news .item, .content .news .list-news .item{
+	display: inline-block;
+	width: 33.33%;
+	padding: 0 5px;
+}
+#news .list-news .item h2, .content .news .list-news .item h2{
+	font-size: 20px;
+}
+#news .list-news .item h2 a, .content .news .list-news .item h2 a{
+	color: inherit;
+	font-weight: 700;
+}
+.content .news .list-news .item{
+	padding: 5px;
+}
+
+.news-single .article .news-img-wrap{
+	width: auto;
+}
+
+.content .frame-type-text p, .frame-type-textpic p{
+	font-size: 20px;
+	margin: 0 0 20px 0;
+	color: #102746;
+}
+.content .frame-type-header h2{
+	color: #102746;
+}
+
+
+@media screen and (max-width: 1300px){
+    .text_image{
+        display: block;
+    }
+
+    .info_block{
+        grid-template-columns: none;
+    }
+
+    .vertical_text_image{
+        grid-template-rows: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        padding: 60px 50px 100px;
+    }
+
+    .content_head {
+        font-size: 32px;
+    }
+
+    .content_head2 {
+        font-size: 26px;
+        font-weight: 300;
+    }
+
+    .page_text {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 32px;
+    }
+
+    .bold_text {
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .content{
+        padding: 60px 30px 100px;
+    }
+}

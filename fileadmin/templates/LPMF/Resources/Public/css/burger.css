@@ -1,0 +1,54 @@
+.burger_menu{
+    position: relative;
+    width: 100%;
+    align-self: center;
+    display: none;
+}
+
+.burger_button{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.burger_button div{
+    height: 3px;
+    width: 30px;
+    border: 1px white solid;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 200px;
+}
+
+.opened_burger{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 180px;
+    display: none;
+}
+
+.opened_burger > a{
+    margin: auto;
+    margin-top: 40px;
+}
+
+.opened_burger .mobile_dropdown div{
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.opened_burger .mobile_dropdown{
+    background-color: orange;
+}
+
+.top_class{
+    top: 100px !important;
+}
+
+.opened_burger > .nous_contacter{
+    margin-bottom: 40px;
+}
+

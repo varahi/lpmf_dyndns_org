@@ -1,0 +1,31 @@
+<f:layout name="Home" />
+
+<f:section name="Main">    
+        
+    <div class="content">
+	   <div id="news">
+		   <div class="content_grid">
+			   <span class="content_head">Nos actualités</span><f:link.page pageUid="22">Voir toutes nos actualités</f:link.page>
+		   </div>
+		   <div class="news">
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '7'}" />
+		   </div>
+	   </div>
+       <div class="content_grid">
+           <span class="content_head">La vie au Lycée</span><span style="text-align: end; display:none;">TOUT VOIR</span>
+       </div>
+        <div class="image_blocks">
+
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '6'}" />
+
+        </div>
+        <div class="content_info">
+            
+		<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+
+        </div>
+    </div>
+    
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />   
+    
+</f:section>

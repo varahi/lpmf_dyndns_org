@@ -1,0 +1,65 @@
+
+.tx-powermail {
+	margin: 0 -30px;
+}
+.powermail_fieldwrap {
+	width:50%;
+	padding: 0 30px;
+	margin: 0 0 20px 0;
+}
+
+#powermail_field_mademande, .powermail_fieldwrap_mademande {
+	width:100%;
+}
+
+.powermail_fieldwrap_nom, .powermail_fieldwrap_telephone {
+	float:right;
+}
+
+
+.powermail_form h3, .powermail_form legend {
+	display:none;
+}
+
+.powermail_submit {
+	color: white;
+	background-color: #1B7DFF;
+	border: none;
+}
+
+.powermail_fieldwrap label{
+	font-size: 13px;
+	color: #707070;
+	margin: 0 0 10px 0;
+	font-weight: 400;
+}
+.powermail_fieldwrap input{
+	width: 100%;
+	padding: 15px 15px;
+	font-size: 13px;
+	border: 1px solid #707070;
+}
+.powermail_fieldwrap textarea{
+	resize: none;
+	height: 270px;
+	width: 100%;
+	padding: 15px 15px;
+	font-size: 13px;
+	border: 1px solid #707070;
+}
+.powermail_fieldwrap input[type="submit"]{
+	background-color: #102746;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	min-width: 170px;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	   -moz-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+}
+.powermail_fieldwrap input[type="submit"]:hover, .powermail_fieldwrap input[type="submit"]:focus, .powermail_fieldwrap input[type="submit"]:active{
+	background-color: #061830;
+}
