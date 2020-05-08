@@ -22,7 +22,7 @@ routeEnhancers:
     plugin: Pi1
     routes:
       -
-        routePath: '/detail/{news_title}'
+        routePath: '/article/{news_title}'
         _controller: 'News::detail'
         _arguments:
           news_title: news
