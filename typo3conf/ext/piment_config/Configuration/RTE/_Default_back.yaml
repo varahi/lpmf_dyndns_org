@@ -1,17 +1,12 @@
-# Load default processing options
 imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
     - { resource: "EXT:rte_ckeditor_image/Configuration/RTE/Plugin.yaml" }
 
-# Add configuration for the editor
-# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
 editor:
     config:
-        entities: 'false'
-        allowedContent: true
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+        contentsCss: "/fileadmin/templates/default/css/rte.css"
 
         stylesSet:
             - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
@@ -107,6 +102,8 @@ editor:
             - { name: tools, groups: [ table, specialchar ] }
             - { name: document, groups: [ mode ] }
 
+        format_tags: "p;h1;h2;h3;h4;h5;pre"
+
         justifyClasses:
             - text-left
             - text-center
@@ -115,60 +112,8 @@ editor:
 
         extraPlugins:
             - justify
-        #  - specialchar
-        #  - codesnippet
-        #  - showblocks
-
-        removePlugins:
-        #      - image
 
         removeButtons:
-            - About
-            - Maximize
-            - ShowBlocks
-            - BGColor
-            - TextColor
-            - Iframe
-            - FontSize
-            - Flash
-            - HorizontalRule
-            - Smiley
-            - PageBreak
             - Anchor
-            - BidiLtr
-            - BidiRtl
-            - Language
-            - JustifyBlock
-            - Blockquote
-            - CreateDiv
             - Underline
             - Strike
-            - HiddenField
-            - ImageButton
-            - Button
-            - Select
-            - Textarea
-            - TextField
-            - Radio
-            - Checkbox
-            - Form
-            - SelectAll
-            - Find
-            - Replace
-            - Cut
-            - Copy
-            - Paste
-            - PasteText
-            - PasteFromWord
-            - Templates
-            - Save
-            - NewPage
-            - Preview
-            - Print
-            - Underline
-            - Subscript
-            - Superscript
-            - Code
-
-        # Limit the height of the editor
-        height: 500
