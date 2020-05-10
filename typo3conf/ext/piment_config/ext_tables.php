@@ -19,4 +19,4 @@ if (!defined('TYPO3_MODE')) {
  * Add rte_ckeditor custom config
  */
 //$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['custom'] = 'EXT:piment_config/Configuration/RTE/Custom.yaml';
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pimentrouge'] = 'EXT:piment_config/Configuration/RTE/Default.yaml';
+//$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pimentrouge'] = 'EXT:piment_config/Configuration/RTE/Default.yaml';

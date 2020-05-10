@@ -1,3 +1,8 @@
+# This string need to include in the root page in back-end for rendering custom gridelements
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:piment_config/Configuration/TSConfig/page.tsconfig">
+
+RTE.default.preset = full
+
 /*
 RTE {
     default.preset = default
@@ -14,6 +19,7 @@ RTE {
 #############
 #### RTE ####
 #############
+/*
 RTE {
     config {
         tt_content {
@@ -60,3 +66,4 @@ RTE {
         }
     }
 }
+*/
