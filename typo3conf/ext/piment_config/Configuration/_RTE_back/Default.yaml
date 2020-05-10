@@ -1,0 +1,174 @@
+# Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+    - { resource: "EXT:rte_ckeditor_image/Configuration/RTE/Plugin.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+    config:
+        entities: 'false'
+        allowedContent: true
+        format_tags: "p;h1;h2;h3;h4;h5;pre"
+
+        stylesSet:
+            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+            - { name: "Table", element: "table", attributes: { 'class': 'table table-hover' } }
+            - { name: "Table Striped", element: "table", attributes: { 'class': 'table table-hover table-striped' } }
+            - { name: "Table Bordered", element: "table", attributes: { 'class': 'table table-hover table-bordered' } }
+            - { name: "Table Condensed", element: "table", attributes: { 'class': 'table table-hover table-condensed' } }
+            - { name: "Row Active", element: "tr", attributes: { 'class': 'active' } }
+            - { name: "Row Success", element: "tr", attributes: { 'class': 'success' } }
+            - { name: "Row Info", element: "tr", attributes: { 'class': 'info' } }
+            - { name: "Row Warning", element: "tr", attributes: { 'class': 'warning' } }
+            - { name: "Row Danger", element: "tr", attributes: { 'class': 'danger' } }
+            - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
+            - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
+            - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
+            - { name: "Button Info", element: "a", attributes: { 'class': 'btn btn-info' } }
+            - { name: "Button Warning", element: "a", attributes: { 'class': 'btn btn-warning' } }
+            - { name: "Button Danger", element: "a", attributes: { 'class': 'btn btn-danger' } }
+            - { name: "Button Rouge", element: "a", attributes: { 'class': 'bt-red' } }
+            - { name: "Button Noir", element: "a", attributes: { 'class': 'bt-black' } }
+            - { name: "Button Bleu", element: "a", attributes: { 'class': 'bt-blue' } }
+            - { name: "Button Gris", element: "a", attributes: { 'class': 'bt-grey' } }
+            - { name: "Titre p", element: "p", attributes: { 'class': 'title' } }
+            - { name: "Taille 12 p", element: "p", attributes: { 'class': 'size_12' } }
+            - { name: "Taille 12 li", element: "li", attributes: { 'class': 'size_12' } }
+            - { name: "Taille 12 span", element: "span", attributes: { 'class': 'size_12' } }
+            - { name: "Taille 12 a", element: "a", attributes: { 'class': 'size_12' } }
+            - { name: "Taille 18 p", element: "p", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 18 li", element: "li", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 18 span", element: "span", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 18 a", element: "a", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 20 p", element: "p", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 20 li", element: "li", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 20 span", element: "span", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 20 a", element: "a", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 22 p", element: "p", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 22 li", element: "li", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 22 span", element: "span", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 22 a", element: "a", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 24 p", element: "p", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 24 li", element: "li", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 24 span", element: "span", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 24 a", element: "a", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 30 p", element: "p", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 30 li", element: "li", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 30 span", element: "span", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 30 a", element: "a", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 36 p", element: "p", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 36 li", element: "li", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 36 span", element: "span", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 36 a", element: "a", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 38 p", element: "p", attributes: { 'class': 'size_38' } }
+            - { name: "Taille 38 li", element: "li", attributes: { 'class': 'size_38' } }
+            - { name: "Taille 38 span", element: "span", attributes: { 'class': 'size_38' } }
+            - { name: "Taille 38 a", element: "a", attributes: { 'class': 'size_38' } }
+            - { name: "Couleur orange p", element: "p", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur orange li", element: "li", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur orange span", element: "span", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur orange a", element: "a", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur rouge p", element: "p", attributes: { 'class': 'txt-red' } }
+            - { name: "Couleur rouge li", element: "li", attributes: { 'class': 'txt-red' } }
+            - { name: "Couleur rouge span", element: "span", attributes: { 'class': 'txt-red' } }
+            - { name: "Couleur rouge a", element: "a", attributes: { 'class': 'txt-red' } }
+            - { name: "Couleur bleu p", element: "p", attributes: { 'class': 'txt-blue' } }
+            - { name: "Couleur bleu li", element: "li", attributes: { 'class': 'txt-blue' } }
+            - { name: "Couleur bleu span", element: "span", attributes: { 'class': 'txt-blue' } }
+            - { name: "Couleur bleu a", element: "a", attributes: { 'class': 'txt-blue' } }
+            - { name: "Couleur gris p", element: "p", attributes: { 'class': 'txt-grey' } }
+            - { name: "Couleur gris li", element: "li", attributes: { 'class': 'txt-grey' } }
+            - { name: "Couleur gris span", element: "span", attributes: { 'class': 'txt-grey' } }
+            - { name: "Couleur gris a", element: "a", attributes: { 'class': 'txt-grey' } }
+            - { name: "Couleur gris2 p", element: "p", attributes: { 'class': 'txt-grey2' } }
+            - { name: "Couleur gris2 li", element: "li", attributes: { 'class': 'txt-grey2' } }
+            - { name: "Couleur gris2 span", element: "span", attributes: { 'class': 'txt-grey2' } }
+            - { name: "Couleur gris2 a", element: "a", attributes: { 'class': 'txt-grey2' } }
+            - { name: "Couleur noir p", element: "p", attributes: { 'class': 'txt-black' } }
+            - { name: "Couleur noir li", element: "li", attributes: { 'class': 'txt-black' } }
+            - { name: "Couleur noir span", element: "span", attributes: { 'class': 'txt-black' } }
+            - { name: "Couleur noir a", element: "a", attributes: { 'class': 'txt-black' } }
+            - { name: "Image droite", element: "img", attributes: { 'class': 'img-right' } }
+            - { name: "Image gauche", element: "img", attributes: { 'class': 'img-left' } }
+            - { name: "Numéro", element: "span", attributes: { 'class': 'number-title' } }
+
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+        #  - specialchar
+        #  - codesnippet
+        #  - showblocks
+
+        removePlugins:
+        #      - image
+
+        removeButtons:
+            - About
+            - Maximize
+            - ShowBlocks
+            - BGColor
+            - TextColor
+            - Iframe
+            - FontSize
+            - Flash
+            - HorizontalRule
+            - Smiley
+            - PageBreak
+            - Anchor
+            - BidiLtr
+            - BidiRtl
+            - Language
+            - JustifyBlock
+            - Blockquote
+            - CreateDiv
+            - Underline
+            - Strike
+            - HiddenField
+            - ImageButton
+            - Button
+            - Select
+            - Textarea
+            - TextField
+            - Radio
+            - Checkbox
+            - Form
+            - SelectAll
+            - Find
+            - Replace
+            - Cut
+            - Copy
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - Templates
+            - Save
+            - NewPage
+            - Preview
+            - Print
+            - Underline
+            - Subscript
+            - Superscript
+            - Code
+
+        # Limit the height of the editor
+        height: 500

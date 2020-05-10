@@ -1,0 +1,5 @@
+###
+# general Page TS Config
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TSConfig/BackendLayouts/" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TSConfig/Page/" extensions="tsconfig">

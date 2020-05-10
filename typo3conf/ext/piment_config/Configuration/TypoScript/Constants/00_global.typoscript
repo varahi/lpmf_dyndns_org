@@ -11,8 +11,8 @@ page {
 
 styles {
     content {
-        textmedia.maxW = 1200
-        textmedia.maxWInText = 800
-        textmedia.linkWrap.width = 1200m
+        textmedia.maxW = 1920
+        textmedia.maxWInText = 1200
+        textmedia.linkWrap.width = 1920m
     }
 }
