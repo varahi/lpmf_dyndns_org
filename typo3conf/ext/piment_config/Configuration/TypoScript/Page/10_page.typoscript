@@ -67,7 +67,7 @@ page{
         css5 = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
         css5.external = 1
         css6 = fileadmin/templates/LPMF/Resources/Public/css/bootstrap.min.css
-        #100_custom = EXT:piment_config/Resources/Public/Css/custom.css
+        100_custom = EXT:piment_config/Resources/Public/Css/custom.css
     }
 
 
