@@ -3,6 +3,25 @@ page{
 
     typeNum=0
 
+    # adding some helpful classes to <body>
+    bodyTagCObject = COA
+    bodyTagCObject {
+
+        wrap = <body|>
+
+        # adding an ID
+        10 = TEXT
+        10 {
+            data = TSFE:id
+            noTrimWrap = | id="page-|"|
+        }
+
+        # ...and some helpful classes
+        20 =< lib.bodytag-classes
+        20.stdWrap.noTrimWrap = | class="|"|
+
+    }
+
     meta{
         viewport = width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0
         X-UA-Compatible = ie=edge
