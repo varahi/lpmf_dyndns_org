@@ -162,7 +162,7 @@
 .first_row div span, .second_row div span{
     font-weight: bold;
     font-size: 50px;
-    line-height: 60px;
+    /* line-height: 30px; */
     position: absolute;
     bottom: 0;
     left:15px;
